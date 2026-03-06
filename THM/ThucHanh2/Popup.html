@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="modal-page">
+      <div class="modal-box">
+        <div class="modal-header">
+          <span>New Employee</span>
+
+          <a href="GiaoDien.html" class="close">×</a>
+        </div>
+
+        <div class="modal-body">
+          <div class="row">
+            <div>
+              <label>Name</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label>Phone</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>Position</label>
+              <select>
+                <option>-- Select Position --</option>
+                <option>Staff</option>
+                <option>Manager</option>
+                <option>CEO</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="gender">
+            <label>Sex</label><br />
+            <label><input type="radio" name="sex" /></label>
+            <span>Male</span>
+            <label><input type="radio" name="sex" /></label>
+            <span>Female</span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn-save">Save</button>
+          <a href="GiaoDien.html" class="btn-cancel">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
