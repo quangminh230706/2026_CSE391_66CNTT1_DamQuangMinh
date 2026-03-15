@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng điểm sinh viên</title>
+    <link rel="stylesheet" href="ScoreBoards.css" />
+  </head>
+  <body>
+    <h2>Quản lý điểm sinh viên</h2>
+    <div class="form">
+      <input type="text" id="name" placeholder="Họ và tên" />
+      <input
+        type="number"
+        id="score"
+        placeholder="Điểm (0-10)"
+        min="0"
+        max="10"
+      />
+      <button id="addBtn">Thêm</button>
+    </div>
+    <div class="filter">
+      <input type="text" id="SearchName" placeholder="Tìm kiếm tên sinh viên" />
+      <select id="rankFilter">
+        <option value="all">Tất cả</option>
+        <option value="Giỏi">Giỏi</option>
+        <option value="Khá">Khá</option>
+        <option value="Trung bình">Trung bình</option>
+        <option value="Yếu">Yếu</option>
+      </select>
+    </div>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Họ tên</th>
+          <th>Điểm</th>
+          <th>Xếp loại</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <p id="stats"></p>
+
+    <script src="ScoreBoards.js"></script>
+  </body>
+</html>

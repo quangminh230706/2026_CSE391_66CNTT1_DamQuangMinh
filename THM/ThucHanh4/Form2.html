@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Đặt Hàng</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"
+      type="text/javascript"
+    ></script>
+    <style>
+      body {
+        font-family: Arial;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .form-group {
+        margin-bottom: 12px;
+      }
+
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+
+      #charCount {
+        font-size: 13px;
+      }
+
+      #summary {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 15px;
+        display: none;
+      }
+
+      .success {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Form Đặt Hàng</h2>
+
+    <form id="orderForm">
+      <div class="form-group">
+        <label>Sản phẩm</label>
+        <select id="product">
+          <option value="">-- Chọn sản phẩm --</option>
+          <option value="ao">Áo</option>
+          <option value="quan">Quần</option>
+          <option value="giay">Giày</option>
+        </select>
+        <div class="error" id="productError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Số lượng</label>
+        <input type="number" id="quantity" />
+        <div class="error" id="quantityError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Ngày giao hàng</label>
+        <input type="date" id="deliveryDate" />
+        <div class="error" id="dateError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Địa chỉ giao</label>
+        <input type="text" id="address" />
+        <div class="error" id="addressError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Ghi chú</label>
+        <textarea id="note"></textarea>
+        <div id="charCount">0/200</div>
+        <div class="error" id="noteError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Thanh toán</label><br />
+
+        <input type="radio" name="payment" value="cod" /> COD
+        <input type="radio" name="payment" value="bank" /> Chuyển khoản
+        <input type="radio" name="payment" value="wallet" /> Ví điện tử
+
+        <div class="error" id="paymentError"></div>
+      </div>
+
+      <div class="form-group">
+        <strong>Tổng tiền: </strong>
+        <span id="total">0</span> VNĐ
+      </div>
+
+      <button type="submit">Đặt hàng</button>
+    </form>
+
+    <div id="summary">
+      <h3>Xác nhận đơn hàng</h3>
+
+      <p id="sumProduct"></p>
+      <p id="sumQuantity"></p>
+      <p id="sumTotal"></p>
+      <p id="sumDate"></p>
+
+      <button id="confirmBtn">Xác nhận</button>
+      <button id="cancelBtn">Hủy</button>
+    </div>
+
+    <p class="success" id="successMsg"></p>
+
+    <script src="Form2.js"></script>
+  </body>
+</html>

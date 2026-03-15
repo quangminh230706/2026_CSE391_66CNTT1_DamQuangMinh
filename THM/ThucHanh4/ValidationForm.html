@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form đăng ký</title>
+
+    <link rel="stylesheet" href="ValidationForm.css" />
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+  </head>
+
+  <body>
+    <form id="registerForm">
+      <div class="form-group">
+        <label>Họ và tên</label>
+        <input type="text" id="username" maxlength="50" />
+        <div id="nameCount">0/50</div>
+        <div class="error-message" id="usernameError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email" />
+        <div class="error-message" id="emailError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Số điện thoại</label>
+        <input type="tel" id="phone" />
+        <div class="error-message" id="phoneError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Mật khẩu</label>
+
+        <div class="password-wrapper">
+          <input type="password" id="password" maxlength="50" />
+          <button type="button" id="togglePassword">👁</button>
+        </div>
+
+        <div class="strength-bar">
+          <div id="strengthFill"></div>
+        </div>
+
+        <div id="strengthText"></div>
+
+        <div class="error-message" id="passwordError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Xác nhận mật khẩu</label>
+        <input type="password" id="confirmPassword" />
+        <div class="error-message" id="confirmPasswordError"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Giới tính</label>
+        <input type="radio" name="gender" value="male" /> Nam
+        <input type="radio" name="gender" value="female" /> Nữ
+        <div class="error-message" id="genderError"></div>
+      </div>
+
+      <div class="form-group">
+        <input type="checkbox" id="terms" />
+        <label>Tôi đồng ý điều khoản</label>
+        <div class="error-message" id="termsError"></div>
+      </div>
+
+      <button type="submit">Đăng ký</button>
+    </form>
+
+    <script src="ValidationForm.js"></script>
+  </body>
+</html>

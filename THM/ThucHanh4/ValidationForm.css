@@ -1,0 +1,62 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+}
+
+.password-wrapper {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  max-width: 260px;
+}
+
+.password-wrapper input {
+  flex: 1;
+}
+
+#password {
+  flex: 1;
+  padding: 5px;
+}
+
+#togglePassword {
+  padding: 5px 8px;
+}
+
+.strength-bar {
+  height: 6px;
+  background: #eee;
+  margin-top: 5px;
+}
+
+#strengthFill {
+  height: 100%;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.weak {
+  background: red;
+}
+
+.medium {
+  background: orange;
+}
+
+.strong {
+  background: green;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
